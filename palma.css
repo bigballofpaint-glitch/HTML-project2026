@@ -1,5 +1,4 @@
-/* Palma destination page
-   This stylesheet is separate from home.css so the homepage stays unchanged. */
+/* Palma css page */
 
 * {
     box-sizing: border-box;
@@ -11,7 +10,7 @@ body {
     color: #ffffff;
 }
 
-/* Keep the navigation consistent with the homepage. */
+/* keeping the style and navigation similar to the main page */
 .site-header {
     position: relative;
     z-index: 2;
@@ -47,7 +46,7 @@ body {
     border-bottom-color: #173B50;
 }
 
-/* Full-page Palma photograph with a dark overlay for readable text. */
+/* darkening the backdrop so the main text is readable */
 .palma-hero {
     min-height: calc(100vh - 64px);
     padding: 55px 24px 30px;
@@ -88,7 +87,7 @@ h1 {
     font-size: clamp(18px, 2.5vw, 23px);
 }
 
-/* A translucent panel separates the text from the photograph. */
+/* a transparent panel to separate text from the backdrop image */
 .intro-card {
     max-width: 760px;
     margin: 0 auto;
@@ -159,7 +158,7 @@ h1 {
     text-underline-offset: 3px;
 }
 
-/* Tablet and mobile layout adjustments. */
+/* making sure the design is responsive  */
 @media (max-width: 700px) {
     .site-nav {
         justify-content: center;
