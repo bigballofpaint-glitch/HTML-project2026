@@ -1,48 +1,160 @@
 body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/* Hero background */
-.hero {
-    background-image: url("homepage-images/cruise.webp");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    ), url("homepage-images/cruise.webp");
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-attachment: fixed;
     color: white;
-    text-align: center;
+    min-height: 100vh;
 }
-/* Navigation bar */
+
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 15px 30px;
-    background-color: white;
+    align-items: center;
+    padding: 15px 40px;
     flex-wrap: wrap;
     gap: 15px;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #173B50;
 }
 
 nav h2 {
     margin: 0;
-    color: #173B50;
 }
 
-/* Hero text */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
 .hero h1 {
-    font-size: 65px;
+    font-size: 60px;
     margin: 0;
+    letter-spacing: 5px;
 }
 
 .hero p {
-    font-size: 22px;
+    font-size: 20px;
+}
+/* About the cruise */
+.about {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    line-height: 1.6;
+}
+
+/* Facilities and activities */
+.facilities,
+.activities {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    box-sizing: border-box;
+    margin: 10px 4%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.facilities ul,
+.activities ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* Destinations */
+.destinations {
+    text-align: center;
+    padding: 15px 40px;
+}
+
+.destinations table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.destinations img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.destinations td,
+.destinations th {
+    padding: 8px;
+}
+
+.destinations a {
+    color: white;
+    text-decoration: none;
+}
+
+.destinations a:hover {
+    text-decoration: underline;
+}
+.hero {
+    padding: 8px;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/* Mobile responsive design */
+@media screen and (max-width: 768px) {
+
+    nav {
+        justify-content: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    nav h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .facilities,
+    .activities {
+        display: block;
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .destinations {
+        padding: 10px;
+    }
+
+    .destinations img {
+        height: 100px;
+    }
+
+    .destinations th,
+    .destinations td {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
 }
