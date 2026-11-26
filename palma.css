@@ -1,0 +1,204 @@
+/* Palma destination page
+   This stylesheet is separate from home.css so the homepage stays unchanged. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* Keep the navigation consistent with the homepage. */
+.site-header {
+    position: relative;
+    z-index: 2;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 30px;
+    background-color: #ffffff;
+}
+
+.site-nav h2 {
+    margin: 0;
+    color: #173B50;
+    letter-spacing: 1px;
+}
+
+.site-nav a {
+    color: #173B50;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+    border-bottom-color: #173B50;
+}
+
+/* Full-page Palma photograph with a dark overlay for readable text. */
+.palma-hero {
+    min-height: calc(100vh - 64px);
+    padding: 55px 24px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:
+        linear-gradient(rgba(8, 23, 32, 0.52), rgba(8, 23, 32, 0.72)),
+        url("https://images.pexels.com/photos/36050601/pexels-photo-36050601.jpeg?cs=srgb&dl=pexels-david-vives-1474251-36050601.jpg&fm=jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(52px, 9vw, 86px);
+    line-height: 1.05;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin: 12px 0 32px;
+    font-size: clamp(18px, 2.5vw, 23px);
+}
+
+/* A translucent panel separates the text from the photograph. */
+.intro-card {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px 34px;
+    text-align: left;
+    background: rgba(10, 28, 39, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 10px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+.intro-card h2 {
+    margin: 0 0 14px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.intro-card p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.music-section {
+    margin-top: 25px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.music-section h3 {
+    margin: 0 0 10px;
+    font-size: 21px;
+}
+
+.audio-player {
+    margin: 20px 0 0;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 7px;
+}
+
+.audio-player figcaption {
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.audio-player audio {
+    display: block;
+    width: 100%;
+    min-height: 42px;
+}
+
+.audio-note {
+    margin-top: 8px !important;
+    font-size: 13px !important;
+    opacity: 0.85;
+}
+
+.photo-credit {
+    margin: 15px 0 0;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.photo-credit a {
+    color: #ffffff;
+    text-underline-offset: 3px;
+}
+
+/* Tablet and mobile layout adjustments. */
+@media (max-width: 700px) {
+    .site-nav {
+        justify-content: center;
+        padding: 14px 18px;
+        gap: 12px 20px;
+    }
+
+    .site-nav h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3px;
+    }
+
+    .palma-hero {
+        min-height: calc(100vh - 100px);
+        padding: 42px 16px 24px;
+        background-attachment: scroll;
+    }
+
+    .intro-card {
+        padding: 23px 20px;
+    }
+
+    .intro-card p {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-nav {
+        gap: 10px 14px;
+    }
+
+    .site-nav a {
+        font-size: 14px;
+    }
+
+    .intro-card {
+        padding: 20px 16px;
+    }
+}
