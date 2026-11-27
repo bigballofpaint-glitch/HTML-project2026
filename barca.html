@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>El Dorado Cruise | Barcelona</title>
+
+    <style>
+        /* GENERAL PAGE STYLING */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f7f5f0;
+            color: #172b3a;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION BAR */
+
+        header {
+            background-color: #102b40;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d6b779;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 570px;
+            background:
+                linear-gradient(
+                    rgba(8, 29, 45, 0.35),
+                    rgba(8, 29, 45, 0.65)
+                ),
+                url("https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 85px);
+            letter-spacing: 8px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            letter-spacing: 2px;
+            max-width: 650px;
+        }
+
+        .hero-button {
+            margin-top: 30px;
+            padding: 14px 32px;
+            background-color: #d6b779;
+            color: #102b40;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* INTRODUCTION */
+
+        .intro {
+            padding: 85px 12%;
+            text-align: center;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .small-heading {
+            color: #b18b4d;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .intro h2,
+        .section-heading {
+            font-size: 36px;
+            margin: 15px 0 20px;
+            color: #102b40;
+        }
+
+        .intro p {
+            font-size: 17px;
+            color: #5b6670;
+        }
+
+        /* DESTINATION HIGHLIGHTS */
+
+        .highlights {
+            padding: 70px 8%;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #f7f5f0;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+            color: #102b40;
+        }
+
+        .card p {
+            color: #68737d;
+            font-size: 15px;
+        }
+
+        /* BARCELONA EXPERIENCE */
+
+        .experience {
+            padding: 85px 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .experience img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+        }
+
+        .experience-text p {
+            color: #65717a;
+            margin-bottom: 18px;
+        }
+
+        .experience-text ul {
+            padding-left: 20px;
+            color: #435361;
+        }
+
+        .experience-text li {
+            margin-bottom: 10px;
+        }
+
+        /* CRUISE INFORMATION */
+
+        .cruise-info {
+            background-color: #102b40;
+            color: white;
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        .cruise-info h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .cruise-info p {
+            max-width: 700px;
+            margin: auto;
+            color: #d6dce0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .info-item {
+            padding: 20px;
+            border: 1px solid #536a7b;
+        }
+
+        .info-item h3 {
+            color: #d6b779;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #091c2a;
+            color: white;
+            padding: 30px 8%;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #b9c3ca;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .experience {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 450px;
+            }
+
+            .intro {
+                padding: 60px 8%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <div class="logo">EL DORADO</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#about">Barcelona</a>
+            <a href="#highlights">Attractions</a>
+            <a href="#experience">Experience</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+        <h1>BARCELONA</h1>
+
+        <p>
+            Discover the beauty, culture and Mediterranean
+            atmosphere of Spain's most vibrant coastal city.
+        </p>
+
+        <a href="#about" class="hero-button">
+            EXPLORE BARCELONA
+        </a>
+    </section>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro" id="about">
+
+        <span class="small-heading">
+            Your Mediterranean Destination
+        </span>
+
+        <h2>Welcome to Barcelona</h2>
+
+        <p>
+            Barcelona is one of Spain's most exciting destinations,
+            combining beautiful beaches, impressive architecture,
+            rich history and unforgettable food. From the famous
+            Sagrada Família to the lively streets of the Gothic
+            Quarter, there is something for everyone to discover.
+            As part of the El Dorado cruise, Barcelona offers the
+            perfect opportunity to explore Mediterranean culture
+            and experience a truly memorable destination.
+        </p>
+
+    </section>
+
+
+    <!-- MAIN ATTRACTIONS -->
+
+    <section class="highlights" id="highlights">
+
+        <div class="section-title">
+
+            <span class="small-heading">
+                Discover the City
+            </span>
+
+            <h2 class="section-heading">
+                Barcelona Highlights
+            </h2>
+
+        </div>
+
+        <div class="cards">
+
+            <!-- ATTRACTION 1 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1594138537590-8c8a9e3f5f0b?auto=format&fit=crop&w=900&q=80"
+                    alt="Sagrada Familia in Barcelona"
+                >
+
+                <div class="card-content">
+
+                    <h3>Sagrada Família</h3>
+
+                    <p>
+                        Visit Barcelona's world-famous basilica,
+                        designed by Antoni Gaudí. Its extraordinary
+                        architecture makes it one of the city's
+                        most recognisable landmarks.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- ATTRACTION 2 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=900&q=80"
+                    alt="Barcelona city streets"
+                >
+
+                <div class="card-content">
+
+                    <h3>Gothic Quarter</h3>
+
+                    <p>
+                        Explore historic streets, charming
+                        squares and traditional Spanish
+                        architecture in the heart of Barcelona.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- ATTRACTION 3 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+                    alt="Mediterranean beach"
+                >
+
+                <div class="card-content">
+
+                    <h3>Barceloneta Beach</h3>
+
+                    <p>
+                        Enjoy the Mediterranean coastline,
+                        relax by the sea and experience the
+                        atmosphere of Barcelona's beaches.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE SECTION -->
+
+    <section class="experience" id="experience">
+
+        <img
+            src="https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?auto=format&fit=crop&w=1000&q=85"
+            alt="Barcelona architecture and city scenery"
+        >
+
+        <div class="experience-text">
+
+            <span class="small-heading">
+                The Barcelona Experience
+            </span>
+
+            <h2 class="section-heading">
+                More Than Just a Destination
+            </h2>
+
+            <p>
+                Barcelona is a city full of energy, creativity
+                and tradition. Visitors can experience its
+                Mediterranean lifestyle while discovering
+                its famous landmarks and local culture.
+            </p>
+
+            <p>
+                During your cruise stop, make time to discover:
+            </p>
+
+            <ul>
+                <li>Beautiful Mediterranean scenery</li>
+                <li>Famous architectural landmarks</li>
+                <li>Traditional Spanish food and culture</li>
+                <li>Historic streets and shopping areas</li>
+                <li>Relaxing coastal views and beaches</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- CRUISE INFORMATION -->
+
+    <section class="cruise-info">
+
+        <span class="small-heading">
+            El Dorado Cruise
+        </span>
+
+        <h2>Your Barcelona Stop</h2>
+
+        <p>
+            Barcelona is one of the unforgettable destinations
+            included in the El Dorado Mediterranean cruise.
+            Get ready to explore, discover and enjoy everything
+            this incredible Spanish city has to offer.
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-item">
+                <h3>Destination</h3>
+                <p>Barcelona, Spain</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Region</h3>
+                <p>Mediterranean Sea</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Experience</h3>
+                <p>Culture, History and Beaches</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>EL DORADO CRUISE</h3>
+
+        <p>
+            Discover the Mediterranean. Experience the extraordinary.
+        </p>
+
+        <p>
+            &copy; 2026 El Dorado Cruise | Barcelona Destination Page
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        console.log("El Dorado Barcelona page loaded successfully!");
+
+    </script>
+
+</body>
+</html>
