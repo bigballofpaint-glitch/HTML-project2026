@@ -21,3 +21,4 @@ We chose the  travel guide option for the group project, and made a Spanish crui
 
 4th - alicante - Jonathan
 
+You can view our website via github pages - go to the general settings of our github project and then click on pages - there will be the option to visit site
