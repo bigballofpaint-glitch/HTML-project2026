@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+/* Navigation bar */
+
+header {
+    background-color: white;
+    padding: 15px 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav h2 {
+    color: #173B50;
+    margin: 0;
+}
+
+nav a {
+    color: #173B50;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Barcelona background */
+
+.barcelona {
+    min-height: calc(100vh - 65px);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.65)),
+        url("https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* Text box */
+
+.content {
+    max-width: 750px;
+    padding: 30px;
+    background: rgba(10, 28, 39, 0.8);
+    border-radius: 8px;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 0;
+}
+
+.content h2 {
+    margin-top: 20px;
+}
+
+.content p {
+    line-height: 1.6;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+    }
+
+    nav h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+}
