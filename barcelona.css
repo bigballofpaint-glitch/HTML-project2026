@@ -8,7 +8,7 @@ body {
     color: white;
 }
 
-/* Navigation bar */
+/* website navigation bar */
 
 header {
     background-color: white;
@@ -54,7 +54,7 @@ nav a:hover {
     background-position: center;
 }
 
-/* Text box */
+/* text box */
 
 .content {
     max-width: 750px;
@@ -77,7 +77,7 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* Mobile layout */
+/* mobile layout */
 
 @media (max-width: 600px) {
     nav {
